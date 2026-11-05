@@ -1,0 +1,14 @@
+[
+  {
+    "video_file": "malloc_viral_1m.mp4",
+    "caption": "Why 99% of Developers Can't Write Malloc in C\n\nMost engineers rely on high-level memory management without understanding how sbrk() and memory metadata headers actually work at the kernel layer.\n\nComment 'CODE' to get the full zero-warning C codebase sent directly to your DMs.\n\nFollow @amrkhedrrr for bare-metal engineering & high-performance routines.\n\n#systemsengineering #cprogramming #baremetal #linuxkernel #faang #softwareengineering #coding #computerarchitecture #tech"
+  },
+  {
+    "video_file": "shell_viral_1m.mp4",
+    "caption": "Building a Unix Shell from Scratch in Pure C\n\nEver wondered how your terminal creates processes? Here is the exact POSIX fork() and execvp() implementation.\n\nComment 'CODE' for GitHub repository access.\n\nFollow @amrkhedrrr for bare-metal engineering & high-performance routines.\n\n#systemsengineering #cprogramming #baremetal #linuxkernel #faang #softwareengineering #coding #computerarchitecture #tech"
+  },
+  {
+    "video_file": "io_bench_viral_1m.mp4",
+    "caption": "Raw POSIX write() vs High-Level I/O Benchmarking\n\nWe benchmarked raw kernel system calls against standard library buffer wrappers over 100MB of stream output.\n\nComment 'CODE' to review the benchmark source file.\n\nFollow @amrkhedrrr for bare-metal engineering & high-performance routines.\n\n#systemsengineering #cprogramming #baremetal #linuxkernel #faang #softwareengineering #coding #computerarchitecture #tech"
+  }
+]
