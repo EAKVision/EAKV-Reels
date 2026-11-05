@@ -22,4 +22,5 @@ jobs:
         gcc -Wall micro_shell.c -o micro_shell_test
         gcc -Wall -O3 io_bench.c -o io_bench_test
         gcc -Wall -O3 vm.c -o elite_vm_test
-        echo "All Elite C modules compiled successfully."
+        gcc -Wall -O3 tcp_analyzer.c -o tcp_analyzer_test
+        echo "All 5 Elite C modules compiled successfully."
