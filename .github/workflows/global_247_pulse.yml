@@ -1,0 +1,36 @@
+name: EAKV Sovereign 24/7 Global Distribution Pulse
+
+on:
+  schedule:
+    # Executes every 30 minutes, 24/7/365 on GitHub's cloud infrastructure
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-global-daemon:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute 24/7 Global Distribution Nodes
+        run: |
+          python3 global_247_daemon.py
+          python3 seo_tagger.py
+          python3 share_optimizer.py
+          python3 loop_compressor.py
+          python3 fleet_dashboard.py
+
+      - name: Auto-Commit Live Telemetry to Remote Main
+        run: |
+          git config --global user.name "EAKV-Autonomous-Bot"
+          git config --global user.email "bot@eakvision.com"
+          git add *_telemetry.json 2>/dev/null || true
+          git diff-index --quiet HEAD || git commit -m "chore(telemetry): 24/7 cloud pulse update [skip ci]"
+          git push
