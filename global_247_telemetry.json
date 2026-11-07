@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-11-07 21:26:27",
+  "mode": "CONTINUOUS_247_SATURATION",
+  "coverage": "100% GLOBAL TIMEZONES",
+  "active_grid": {
+    "US_PEAK": {
+      "window": "18:00 - 23:00 EST",
+      "hubs": [
+        "New York",
+        "Silicon Valley",
+        "Austin"
+      ],
+      "status": "ACTIVE \u26a1"
+    },
+    "EU_PEAK": {
+      "window": "07:00 - 12:00 UTC",
+      "hubs": [
+        "London",
+        "Berlin",
+        "Zurich"
+      ],
+      "status": "ACTIVE \u26a1"
+    },
+    "APAC_PEAK": {
+      "window": "00:00 - 05:00 UTC",
+      "hubs": [
+        "Tokyo",
+        "Singapore",
+        "Sydney"
+      ],
+      "status": "ACTIVE \u26a1"
+    }
+  },
+  "status": "247_ACTIVE"
+}
