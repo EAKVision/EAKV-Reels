@@ -1,24 +1,21 @@
-#!/usr/bin/env python3
-import json
+import csv
 import os
+import sys
+import time
 
-def track_performance():
-    print("[TRACKER] Scanning active target matrix for engagement metrics...")
-    if not os.path.exists('active_target.json'):
-        print("[ERROR] active_target.json missing.")
-        return
-        
-    with open('active_target.json', 'r') as f:
-        data = json.load(f)
-        targets = data.get('targets', [])
-        
-    print(f"========================================")
-    print(f" EAKV MATRIX PERFORMANCE REPORT ({len(targets)} Reels)")
-    print(f"========================================")
-    for idx, target in enumerate(targets, 1):
-        print(f"[{idx}] Reel ID: {target} --> Status: OPTIMIZED [Retention Boost Active]")
-    print(f"========================================")
-    print("[SUCCESS] Performance audit complete.")
+CSV_FILE = "reel_performance.csv"
+
+def log_reel(reel_id, title, niche, views=0, likes=0, shares=0):
+    file_exists = os.path.exists(CSV_FILE)
+    with open(CSV_FILE, "a", newline="") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["timestamp", "reel_id", "title", "niche", "views", "likes", "shares", "status"])
+        writer.writerow([time.strftime("%Y-%m-%d %H:%M:%S"), reel_id, title, niche, views, likes, shares, "LOGGED_&_TRACKED ⚡"])
+    print(f"✅ [SUCCESS] Reel payload '{reel_id}' ({title}) logged to {CSV_FILE}")
 
 if __name__ == "__main__":
-    track_performance()
+    reel_id = sys.argv[1] if len(sys.argv) > 1 else "DfccmkhqTqf"
+    title = sys.argv[2] if len(sys.argv) > 2 else "World Record Breaker"
+    niche = sys.argv[3] if len(sys.argv) > 3 else "hybrid_athletics"
+    log_reel(reel_id, title, niche)
