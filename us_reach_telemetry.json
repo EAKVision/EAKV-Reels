@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-07 20:51:15",
+  "target_market": "United States (All Time Zones)",
+  "distribution_status": "OPTIMIZED FOR PEAK SATURATION",
+  "zones": {
+    "Eastern (EST / EDT)": {
+      "prime_window": "18:00 - 21:00",
+      "weight": "45% audience share",
+      "status": "LOCKED \u26a1"
+    },
+    "Central (CST / CDT)": {
+      "prime_window": "18:00 - 21:00",
+      "weight": "25% audience share",
+      "status": "LOCKED \u26a1"
+    },
+    "Mountain (MST / MDT)": {
+      "prime_window": "18:00 - 21:00",
+      "weight": "10% audience share",
+      "status": "LOCKED \u26a1"
+    },
+    "Pacific (PST / PDT)": {
+      "prime_window": "18:00 - 21:00",
+      "weight": "20% audience share",
+      "status": "LOCKED \u26a1"
+    }
+  }
+}
