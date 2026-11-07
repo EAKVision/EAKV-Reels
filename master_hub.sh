@@ -3,17 +3,19 @@
 while true; do
     clear
     echo "=================================================="
-    echo "     EAKV-REELS MASTER COMMAND CENTER V4 (MAX)    "
+    echo "     EAKV-REELS MASTER COMMAND CENTER V5 (MAX)    "
     echo "=================================================="
     echo " 1. Run Organic Boost Protocol (active_target.json)"
     echo " 2. Run Autonomous Git Watchdog (Sync State)"
     echo " 3. Generate Code-to-Reel Visual Artifact"
-    echo " 4. Export Interview Proof-of-Work (Markdown)"
-    echo " 5. Generate Interview Technical Talking-Point Brief"
-    echo " 6. Track & Rotate Active Reel Matrix Performance"
-    echo " 7. Exit Hub"
+    echo " 4. Execute Automated Social Publisher"
+    echo " 5. Export Interview Proof-of-Work (Markdown)"
+    echo " 6. Generate Interview Technical Talking-Point Brief"
+    echo " 7. Sync GitHub README Telemetry"
+    echo " 8. Track & Rotate Active Reel Matrix Performance"
+    echo " 9. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-7]: " choice
+    read -p "Select an option [1-9]: " choice
 
     case $choice in
         1)
@@ -32,22 +34,32 @@ while true; do
             read -p "Press Enter to return to menu..."
             ;;
         4)
+            echo "[*] Executing automated social publisher..."
+            python3 auto_publisher.py
+            read -p "Press Enter to return to menu..."
+            ;;
+        5)
             echo "[*] Exporting proof-of-work report..."
             python3 proof_exporter.py
             read -p "Press Enter to return to menu..."
             ;;
-        5)
+        6)
             echo "[*] Generating interview brief..."
             python3 interview_prep_gen.py
             read -p "Press Enter to return to menu..."
             ;;
-        6)
+        7)
+            echo "[*] Syncing GitHub README..."
+            python3 readme_sync.py
+            read -p "Press Enter to return to menu..."
+            ;;
+        8)
             echo "[*] Scanning and rotating active matrix..."
             python3 track_reel_performance.py
             python3 matrix_rotator.py
             read -p "Press Enter to return to menu..."
             ;;
-        7)
+        9)
             echo "Exiting Sovereign Hub. Stay relentless. ⚡"
             exit 0
             ;;
