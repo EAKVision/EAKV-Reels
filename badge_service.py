@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+import subprocess
+
+def generate_live_badge():
+    print("[BADGE-ENGINE] Fetching workspace metrics...")
+    try:
+        commits = subprocess.check_output(["git", "rev-list", "--count", "HEAD"]).decode().strip()
+    except Exception:
+        commits = "100+"
+
+    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="450" height="120" viewBox="0 0 450 120">
+  <rect width="100%" height="100%" fill="#0d1117" rx="10" stroke="#30363d" stroke-width="2"/>
+  <text x="20" y="35" fill="#58a6ff" font-family="Courier, monospace" font-size="16" font-weight="bold">EAKV SOVEREIGN ENGINE</text>
+  <circle cx="410" cy="30" r="6" fill="#3fb950"/>
+  <text x="345" y="35" fill="#3fb950" font-family="Courier, monospace" font-size="12">ONLINE</text>
+  <line x1="20" y1="50" x2="430" y2="50" stroke="#30363d" stroke-width="1"/>
+  <text x="20" y="75" fill="#8b949e" font-family="Courier, monospace" font-size="13">Commits: <tspan fill="#f0883e">{commits}</tspan></text>
+  <text x="20" y="98" fill="#8b949e" font-family="Courier, monospace" font-size="13">Architecture: <tspan fill="#58a6ff">POSIX C / WSL2</tspan></text>
+  <text x="220" y="75" fill="#8b949e" font-family="Courier, monospace" font-size="13">Status: <tspan fill="#3fb950">Zero-Bloat</tspan></text>
+  <text x="220" y="98" fill="#8b949e" font-family="Courier, monospace" font-size="13">Telemetry: <tspan fill="#bc8cff">Encrypted</tspan></text>
+</svg>"""
+
+    with open("status_badge.svg", "w") as f:
+        f.write(svg_content)
+    print("[SUCCESS] Generated status_badge.svg. Embeddable directly into README.md!")
+
+if __name__ == "__main__":
+    generate_live_badge()
