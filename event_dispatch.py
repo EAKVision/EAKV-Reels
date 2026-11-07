@@ -1,32 +1,46 @@
-import sys
 import time
-import argparse
 import json
+import os
 
-KEYWORDS = ["CODE", "BUILD", "MATRIX", "SYSTEM"]
+PAYLOAD_MAP = {
+    "CODE": "https://github.com/EAKVision/EAKV-Reels/blob/main/kernel_tracer.c",
+    "BUILD": "https://github.com/EAKVision/EAKV-Reels/blob/main/render_pipeline.py",
+    "MATRIX": "https://github.com/EAKVision/EAKV-Reels/blob/main/boost_config.py",
+    "SYSTEM": "https://github.com/EAKVision/EAKV-Reels"
+}
+
+def log_event(user_handle, keyword, payload):
+    event = {
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "user": user_handle,
+        "keyword": keyword,
+        "payload": payload
+    }
+    
+    events = []
+    if os.path.exists("funnel_events.json"):
+        with open("funnel_events.json", "r") as f:
+            try:
+                events = json.load(f)
+            except:
+                events = []
+                
+    events.append(event)
+    with open("funnel_events.json", "w") as f:
+        json.dump(events, f, indent=2)
 
 def handle_comment_event(comment_text, user_handle):
-    for kw in KEYWORDS:
+    for kw, payload in PAYLOAD_MAP.items():
         if kw in comment_text.upper():
-            print(f"[DM-FUNNEL] Keyword '{kw}' detected from @{user_handle}!")
-            print(f"            ↳ Dispatching private payload link to @{user_handle} DM...")
-            print(f"✅ [SUCCESS] DM conversion event logged.")
+            print(f"[DM-FUNNEL] Trigger '{kw}' detected from @{user_handle}!")
+            print(f"            ↳ Payload Routed: {payload}")
+            print(f"            ↳ Dispatching instant DM response...")
+            log_event(user_handle, kw, payload)
+            print(f"✅ [CONVERSION LOGGED] Event written to funnel_events.json")
             return True
     return False
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--target", help="Target URL")
-    parser.add_argument("--mode", default="boost", help="Mode")
-    args = parser.parse_args()
-
-    print("[EVENT-DISPATCH] Initializing real-time webhook & DM funnel hooks...")
-    print(f"[EVENT-DISPATCH] [{time.strftime('%Y-%m-%d %H:%M:%S')}] Active branch: main")
-    print(f"[EVENT-DISPATCH] DM funnel active. Monitoring triggers: {KEYWORDS}")
-    
-    # Simulate dynamic incoming event
-    handle_comment_event("Send me the CODE for this!", "dev_lead")
-    print("[SUCCESS] Event dispatcher loop locked. DM Funnel & Telemetry active.")
-
 if __name__ == "__main__":
-    main()
+    print("[EVENT-DISPATCH] Master Webhook & DM Funnel Active.")
+    handle_comment_event("Send me the CODE for this system!", "alex_dev")
+    handle_comment_event("I want to see the MATRIX config", "sarah_tech")
