@@ -1,11 +1,14 @@
 {
-    "targets": [
-        "DfcCv35REi-",
-        "Dd7PL1exx-J",
-        "Ddt4qqsqlHT",
-        "DdrUBmEKJkR",
-        "DdrKInTqpAf",
-        "DfSE91eKy_S",
-        "DfZRKbMxWsn"
-    ]
+  "targets": [
+    "DfcCv35REi-",
+    "Dd7PL1exx-J",
+    "Ddt4qqsqlHT",
+    "DdrUBmEKJkR",
+    "DdrKInTqpAf",
+    "DfSE91eKy_S",
+    "DfZRKbMxWsn",
+    "DfccmkhqTqf"
+  ],
+  "latest_active": "DfccmkhqTqf",
+  "total_count": 8
 }
