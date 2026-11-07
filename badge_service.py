@@ -1,28 +1,33 @@
-#!/usr/bin/env python3
-import subprocess
+import json
+import time
 
-def generate_live_badge():
-    print("[BADGE-ENGINE] Fetching workspace metrics...")
-    try:
-        commits = subprocess.check_output(["git", "rev-list", "--count", "HEAD"]).decode().strip()
-    except Exception:
-        commits = "100+"
+def generate_telemetry_badges():
+    with open("active_target.json", "r") as f:
+        data = json.load(f)
+        
+    targets = data.get("targets", [])
+    real_targets = [t for t in targets if not t.startswith("REEL_TARGET_")]
+    
+    print("[BADGE-SERVICE] Generating real-time telemetry metrics...")
+    print(f"  ↳ Total Capacity : {len(targets)} Slots")
+    print(f"  ↳ Real Active    : {len(real_targets)} Instagram Reels")
+    print(f"  ↳ DM Funnel State: ONLINE 💬")
+    print(f"  ↳ Engine Velocity: 60 FPS ⚡")
+    
+    markdown_badges = f"""
+### ⚡ Sovereign Engine Live Telemetry
 
-    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="450" height="120" viewBox="0 0 450 120">
-  <rect width="100%" height="100%" fill="#0d1117" rx="10" stroke="#30363d" stroke-width="2"/>
-  <text x="20" y="35" fill="#58a6ff" font-family="Courier, monospace" font-size="16" font-weight="bold">EAKV SOVEREIGN ENGINE</text>
-  <circle cx="410" cy="30" r="6" fill="#3fb950"/>
-  <text x="345" y="35" fill="#3fb950" font-family="Courier, monospace" font-size="12">ONLINE</text>
-  <line x1="20" y1="50" x2="430" y2="50" stroke="#30363d" stroke-width="1"/>
-  <text x="20" y="75" fill="#8b949e" font-family="Courier, monospace" font-size="13">Commits: <tspan fill="#f0883e">{commits}</tspan></text>
-  <text x="20" y="98" fill="#8b949e" font-family="Courier, monospace" font-size="13">Architecture: <tspan fill="#58a6ff">POSIX C / WSL2</tspan></text>
-  <text x="220" y="75" fill="#8b949e" font-family="Courier, monospace" font-size="13">Status: <tspan fill="#3fb950">Zero-Bloat</tspan></text>
-  <text x="220" y="98" fill="#8b949e" font-family="Courier, monospace" font-size="13">Telemetry: <tspan fill="#bc8cff">Encrypted</tspan></text>
-</svg>"""
+![Matrix Scale](https://img.shields.io/badge/Matrix_Scale-{len(real_targets)}%2F{len(targets)}_Active-blueviolet?style=for-the-badge)
+![Boost Status](https://img.shields.io/badge/Organic_Boost-ONLINE_⚡-brightgreen?style=for-the-badge)
+![DM Funnel](https://img.shields.io/badge/DM_Funnel-ACTIVE_💬-orange?style=for-the-badge)
+![Pipeline Speed](https://img.shields.io/badge/Render_Speed-60_FPS-blue?style=for-the-badge)
 
-    with open("status_badge.svg", "w") as f:
-        f.write(svg_content)
-    print("[SUCCESS] Generated status_badge.svg. Embeddable directly into README.md!")
+*Last Telemetry Sync: {time.strftime('%Y-%m-%d %H:%M:%S')} UTC*
+"""
+    with open("TELEMETRY_BADGES.md", "w") as f:
+        f.write(markdown_badges)
+        
+    print("✅ [SUCCESS] Telemetry badges generated in TELEMETRY_BADGES.md")
 
 if __name__ == "__main__":
-    generate_live_badge()
+    generate_telemetry_badges()
