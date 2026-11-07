@@ -1,0 +1,13 @@
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    // EAKV Low-Level Memory Core
+    int main() {
+        void *ptr = malloc(1024);
+        if (ptr == NULL) return 1;
+        printf("⚡ SYSTEM MEMORY LOCKED AT: %p\n", ptr);
+        free(ptr);
+        return 0;
+    }
+    

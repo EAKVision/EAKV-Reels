@@ -1,0 +1,21 @@
+{
+    "x_twitter": {
+        "hook": "99% of developers write memory leaks. Here is low-level C memory allocation done right in 10 lines of code: \ud83d\udc47",
+        "body": "```c\n#include <stdio.h>\n    #include <stdlib.h>\n\n    // EAKV Low-Level Memory Core\n    int main() {\n        void *ptr = malloc(1024);\n        if (ptr == NULL) return 1;\n        printf(\"\u26a1 SYSTEM MEMORY LOCKED AT: %p\\n\", ptr);\n        free(ptr);\n        return 0;\n    }\n```",
+        "hashtags": "#CProgramming #SystemsEngineering #SoftwareEngineering"
+    },
+    "linkedin": {
+        "hook": "Understanding low-level memory layout isn't optional if you want to build ultra-low latency systems.",
+        "body": "Here is a clean C memory allocation block demonstrating safe pointer checking:\n\n#include <stdio.h>\n    #include <stdlib.h>\n\n    // EAKV Low-Level Memory Core\n    int main() {\n        void *ptr = malloc(1024);\n        if (ptr == NULL) return 1;\n        printf(\"\u26a1 SYSTEM MEMORY LOCKED AT: %p\\n\", ptr);\n        free(ptr);\n        return 0;\n    }\n\nWhat's your go-to pattern for safe allocation?",
+        "hashtags": "#SoftwareEngineering #C #SystemsProgramming #ComputerScience"
+    },
+    "threads": {
+        "hook": "Low-level system architecture tip for the day \u26a1",
+        "body": "Pointer safety in C:\n#include <stdio.h>\n    #include <stdlib.h>\n\n    // EAKV Low-Level Memory Core\n    int main() {\n        void *ptr = malloc(1024);\n        if (ptr == NULL) return 1;\n        printf(\"\u26a1 SYSTEM MEMORY LOCKED AT: %p\\n\", ptr);\n        free(ptr);\n        return 0;\n    }",
+        "hashtags": "#coding #developer #cprogramming"
+    },
+    "tiktok": {
+        "caption": "Low-level C pointers explained in 15s \u26a1 #coding #cprogramming #developer #tech #wsl",
+        "audio_strategy": "Trending high-tempo beats"
+    }
+}

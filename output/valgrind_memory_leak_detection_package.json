@@ -1,0 +1,48 @@
+{
+    "topic": "Valgrind Memory Leak Detection",
+    "ig_tiktok": {
+        "platform": "Instagram Reels & TikTok",
+        "hook_text_overlay": "Why low-level devs need valgrind memory leak detection.",
+        "visual_direction": "0-2s: Split screen Neovim vs Barbell squat. 3-10s: Code debugging screen recording.",
+        "voiceover": "Most developers hide behind high-level frameworks. But when you manage memory manually while pushing your physical limits with Zone-2 Cardio & Track Sprints, you build real cognitive endurance.",
+        "cta": "Comment 'SYSTEM' to get the full source code cheat sheet."
+    },
+    "x_thread": [
+        "1/ Manual memory management in C teaches you discipline that high-level languages obscure. Here is why Valgrind Memory Leak Detection matters:",
+        "2/ Code snippet:\n```c\nvalgrind --leak-check=full ./main\n```",
+        "3/ Just like training for Zone-2 Cardio & Track Sprints, if you don't clean up your allocation, system failure is inevitable.",
+        "4/ Bookmark this for your next deep-work coding block."
+    ],
+    "threads": "Be honest: How many low-level C developers here actively train hybrid (Zone-2 Cardio & Track Sprints)? What does your weekly routine look like?",
+    "linkedin": {
+        "platform": "LinkedIn PDF Carousel",
+        "title": "5 System Engineering Lessons from Valgrind Memory Leak Detection",
+        "slides": [
+            {
+                "slide": 1,
+                "title": "Zero-Cost Abstractions",
+                "body": "Don't pay for performance you don't use."
+            },
+            {
+                "slide": 2,
+                "title": "Explicit Memory Management",
+                "body": "Take 100% ownership of your resource lifecycle."
+            },
+            {
+                "slide": 3,
+                "title": "Deterministic Execution",
+                "body": "Predictable daily habits beat volatile motivation every time."
+            },
+            {
+                "slide": 4,
+                "title": "Profiling & Bottleneck Auditing",
+                "body": "Audit sleep and recovery before optimizing workload."
+            },
+            {
+                "slide": 5,
+                "title": "Compile-Time Verification",
+                "body": "Catch failure points long before launch."
+            }
+        ]
+    }
+}

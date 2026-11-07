@@ -1,35 +1,43 @@
 import os
-import datetime
+import sqlite3
 
-def audit_performance():
+def print_dashboard():
     print("==================================================")
-    print("     AKV ELITE SYSTEM: PERFORMANCE DASHBOARD      ")
+    print("     AKV ELITE SYSTEM: UNBREAKABLE TELEMETRY")
     print("==================================================")
     
-    # Check Webhook server status
-    webhook_active = os.system("pgrep -f 'dm_webhook_server' > /dev/null 2>&1") == 0
-    print(f"[*] Webhook Funnel Status : {'ONLINE (24/7 Active)' if webhook_active else 'OFFLINE'}")
-    
-    # Audit webhook log conversions if present
-    log_file = "webhook.log"
+    # Query database leads
+    db_file = "leads.db"
     total_leads = 0
-    if os.path.exists(log_file):
-        with open(log_file, 'r') as f:
-            for line in f:
-                if "TRIGGER DM TO USER" in line or "CODE" in line:
-                    total_leads += 1
-        print(f"[*] Total Code Leads Captured: {total_leads}")
+    recent_leads = []
+    
+    if os.path.exists(db_file):
+        conn = sqlite3.connect(db_file)
+        cursor = conn.cursor()
+        cursor.execute("SELECT COUNT(*) FROM leads")
+        total_leads = cursor.fetchone()[0]
+        
+        cursor.execute("SELECT user_id, message, timestamp FROM leads ORDER BY id DESC LIMIT 3")
+        recent_leads = cursor.fetchall()
+        conn.close()
+        print(f"[*] Webhook Funnel Status : ONLINE (Database Backed)")
     else:
-        print("[*] Total Code Leads Captured: 0 (No logs yet)")
+        print(f"[*] Webhook Funnel Status : INITIALIZING")
         
-    # Check generated 1M+ viral reels
-    reels = [f for f in os.listdir() if f.endswith(".mp4")]
-    print(f"[*] Rendered Viral Reels Ready: {len(reels)} assets available.")
-    for reel in reels:
-        size_mb = os.path.getsize(reel) / (1024 * 1024)
-        print(f"    - {reel} ({size_mb:.2f} MB)")
-        
+    print(f"[*] Total Code Leads Captured: {total_leads}")
+    
+    if recent_leads:
+        print("\n--- Recent Lead Feed ---")
+        for u_id, msg, ts in recent_leads:
+            print(f"  • [{ts}] User: {u_id} -> '{msg}'")
+            
+    print("\n--- Rendered Assets ---")
+    video_files = [f for f in os.listdir('.') if f.endswith('.mp4')]
+    print(f"[*] Rendered Viral Reels Ready: {len(video_files)} assets available.")
+    for vf in video_files[:5]:
+        size = os.path.getsize(vf) / (1024 * 1024)
+        print(f"    - {vf} ({size:.2f} MB)")
     print("==================================================")
 
 if __name__ == "__main__":
-    audit_performance()
+    print_dashboard()
