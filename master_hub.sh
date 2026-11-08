@@ -28,9 +28,10 @@ while true; do
  19. Run Audio Trend Sync (python3 audio_trend_sync.py)
  20. Generate A/B Content Variants (python3 variant_generator.py)
  21. Run Niche Intelligence Radar (python3 niche_radar.py)
+ 22. ⚡ MASTER KEY: Run All 21 Protocols Simultaneously (python3 master_execution_suite.py)
  10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-21]: " choice
+    read -p "Select an option [1-22]: " choice
 
     case $choice in
         1)
@@ -92,6 +93,9 @@ while true; do
         ;;
     21)
         python3 niche_radar.py
+        ;;
+    22)
+        python3 master_execution_suite.py
         ;;
     10)
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"
