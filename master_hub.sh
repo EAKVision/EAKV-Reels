@@ -19,9 +19,12 @@ while true; do
     echo " 9. Track & Rotate Active Reel Matrix Performance"
     echo " 11. Run Women Reach & Aesthetic Optimization (python3 women_reach_optimizer.py)"
     echo " 12. Run US & Worldwide Women Reach Optimizer (python3 global_women_reach_optimizer.py)
+ 13. Run Automated Reel Batcher (python3 auto_reel_batcher.py)
+ 14. Run Matrix Analytics & Telemetry (python3 matrix_analytics.py)
+ 15. Setup Autonomous Cron Watchdog (python3 setup_cron_watchdog.sh)
  10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-12]: " choice
+    read -p "Select an option [1-15]: " choice
 
     case $choice in
         1)
@@ -56,6 +59,15 @@ while true; do
             ;;
         12)
         python3 global_women_reach_optimizer.py
+        ;;
+    13)
+        python3 auto_reel_batcher.py
+        ;;
+    14)
+        python3 matrix_analytics.py
+        ;;
+    15)
+        python3 setup_cron_watchdog.sh
         ;;
     10)
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"
