@@ -18,9 +18,10 @@ while true; do
     echo " 8. Sync GitHub README Telemetry"
     echo " 9. Track & Rotate Active Reel Matrix Performance"
     echo " 11. Run Women Reach & Aesthetic Optimization (python3 women_reach_optimizer.py)"
-    echo " 10. Exit Hub"
+    echo " 12. Run US & Worldwide Women Reach Optimizer (python3 global_women_reach_optimizer.py)
+ 10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-11]: " choice
+    read -p "Select an option [1-12]: " choice
 
     case $choice in
         1)
@@ -53,7 +54,10 @@ while true; do
         11)
             python3 women_reach_optimizer.py
             ;;
-        10)
+        12)
+        python3 global_women_reach_optimizer.py
+        ;;
+    10)
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"
             exit 0
             ;;
