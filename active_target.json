@@ -1,11 +1,16 @@
 {
-  "target_name": "EAKV Sovereign Global Organic Boost",
-  "target_market": "US & Global",
-  "demographic_target": "Women 18-35 (60% Target Share)",
-  "active_status": "Engaged",
   "targets": [
-    "US_Market_Expansion",
-    "Female_18_35_Demographic_Shift",
-    "Minimalist_Aesthetic_Optimization"
+    {
+      "target_id": "Global_Tech_Recruiters_LinkedIn",
+      "url": "https://lnkd.in/p/evufNhDG",
+      "status": "active",
+      "objective": "Dream Job Acquisition & Direct Outreach"
+    },
+    {
+      "target_id": "Worldwide_Instagram_Reel_Matrix",
+      "url": "https://www.instagram.com/reel/DffK5tmKnyT/?rpxt=eTQ1bG5tcXhveno0",
+      "status": "active",
+      "objective": "Global Brand Authority & 50%+ Female Demo (18-35)"
+    }
   ]
 }

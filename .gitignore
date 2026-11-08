@@ -1,0 +1,13 @@
+# Logs and telemetry runtime
+*.log
+*.csv
+*.json
+!active_target.json
+
+# Vault backups and media artifacts
+*.tar.gz
+*.mp4
+*.png
+eakv_vault_backup_*
+generated_batches/
+dashboard/
