@@ -9,7 +9,7 @@ def setup_cron():
     print("[*] Configuring sovereign background watchdog...")
     
     # Example crontab entry running the global optimizer and analytics every 6 hours
-    cron_job = "0 */6 * * * cd /home/AK/EAKV-Reels && python3 global_women_reach_optimizer.py && python3 matrix_analytics.py >> cron_execution.log 2>&1"
+    cron_job = "0 */6 * * * cd /home/AK/EAKV-Reels && python3 aggressive_demographic_shift.py && python3 global_women_reach_optimizer.py && python3 matrix_analytics.py >> cron_execution.log 2>&1"
     
     print("[+] Cron automation payload prepared:")
     print(f"    {cron_job}")
