@@ -25,9 +25,12 @@ while true; do
  16. Run AI Hook & Caption Optimizer (python3 ai_hook_optimizer.py)
  17. Generate Dashboard Analytics Report (python3 generate_dashboard_report.py)
  18. Execute Cloud Vault Backup Sync (python3 cloud_vault_sync.py)
+ 19. Run Audio Trend Sync (python3 audio_trend_sync.py)
+ 20. Generate A/B Content Variants (python3 variant_generator.py)
+ 21. Run Niche Intelligence Radar (python3 niche_radar.py)
  10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-18]: " choice
+    read -p "Select an option [1-21]: " choice
 
     case $choice in
         1)
@@ -80,6 +83,15 @@ while true; do
         ;;
     18)
         python3 cloud_vault_sync.py
+        ;;
+    19)
+        python3 audio_trend_sync.py
+        ;;
+    20)
+        python3 variant_generator.py
+        ;;
+    21)
+        python3 niche_radar.py
         ;;
     10)
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"
