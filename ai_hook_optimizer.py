@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 """
-ai_hook_optimizer.py - Dynamically optimizes hooks and captions for maximum algorithmic CTR.
+ai_hook_optimizer.py - Tunes hooks specifically for 18-35 female tech/productivity engagement.
 """
 
 import json
 from datetime import datetime
 
 def optimize_hooks():
-    print("[*] Analyzing high-converting hooks for tech & hybrid athletics niche...")
+    print("[*] Tuning hooks for 50%+ female demographic retention...")
     
     optimized_payload = {
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "target_audience": "Women & Men 18-35 (US & Global Tech/Productivity)",
+        "target_audience": "Women 18-35 (US & Global Tech, Design, Systems Engineering)",
         "active_hooks": [
-            "Building a 24/7 automated system so I can focus purely on deep work and training.",
-            "How I manage C/Unix systems programming with zero friction.",
-            "The minimalist workflow behind elite consistency."
+            "How I built a calm, zero-friction Unix workflow that protects my deep work time.",
+            "Designing a minimalist digital workspace for maximum focus and peace.",
+            "The exact daily system I use to balance heavy systems programming with elite training."
         ],
-        "ctr_boost_multiplier": "1.8x",
-        "status": "Hooks optimized for high retention"
+        "retention_focus": "Aesthetic clarity, workflow elegance, zero chaos",
+        "status": "Hooks calibrated for high female CTR & share-rate"
     }
     
     with open("optimized_hooks_cache.json", "w") as f:
