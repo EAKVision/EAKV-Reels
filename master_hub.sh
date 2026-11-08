@@ -34,9 +34,12 @@ while true; do
  25. 🌐 Cross-Platform Syndication Mesh (python3 multi_platform_syndicator.py)
  26. 🧠 Predictive Self-Learning Telemetry Loop (python3 self_learning_optimizer.py)
  27. 🤖 Remote Command Bot Interface (python3 telegram_command_bot.py)
+ 28. 📊 Live Web Telemetry Dashboard (python3 live_web_dashboard.py)
+ 29. 📡 Advanced Competitor & Niche Intelligence Radar (python3 advanced_niche_radar.py)
+ 30. 🎬 Automated Video-Splicing Pipeline (python3 video_splicing_pipeline.py)
  10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-27]: " choice
+    read -p "Select an option [1-30]: " choice
 
     case $choice in
         1)
@@ -116,6 +119,15 @@ while true; do
         ;;
     27)
         python3 telegram_command_bot.py
+        ;;
+    28)
+        python3 live_web_dashboard.py
+        ;;
+    29)
+        python3 advanced_niche_radar.py
+        ;;
+    30)
+        python3 video_splicing_pipeline.py
         ;;
     10)
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"
