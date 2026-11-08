@@ -17,7 +17,7 @@ while true; do
     echo " 11. Run Women Reach & Aesthetic Optimization (python3 women_reach_optimizer.py)
  10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-10]: " choice
+    read -p "Select an option [1-11]: " choice
 
     case $choice in
         1)
