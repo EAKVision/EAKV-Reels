@@ -22,9 +22,12 @@ while true; do
  13. Run Automated Reel Batcher (python3 auto_reel_batcher.py)
  14. Run Matrix Analytics & Telemetry (python3 matrix_analytics.py)
  15. Setup Autonomous Cron Watchdog (python3 setup_cron_watchdog.sh)
+ 16. Run AI Hook & Caption Optimizer (python3 ai_hook_optimizer.py)
+ 17. Generate Dashboard Analytics Report (python3 generate_dashboard_report.py)
+ 18. Execute Cloud Vault Backup Sync (python3 cloud_vault_sync.py)
  10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-15]: " choice
+    read -p "Select an option [1-18]: " choice
 
     case $choice in
         1)
@@ -68,6 +71,15 @@ while true; do
         ;;
     15)
         python3 setup_cron_watchdog.sh
+        ;;
+    16)
+        python3 ai_hook_optimizer.py
+        ;;
+    17)
+        python3 generate_dashboard_report.py
+        ;;
+    18)
+        python3 cloud_vault_sync.py
         ;;
     10)
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"
