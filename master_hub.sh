@@ -67,6 +67,10 @@ while true; do
             read -p "Press Enter to return to menu..."
             ;;
         10)
+        ;;
+    11)
+        python3 women_reach_optimizer.py
+        ;;
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"
             exit 0
             ;;
