@@ -30,9 +30,13 @@ while true; do
  21. Run Niche Intelligence Radar (python3 niche_radar.py)
  22. ⚡ MASTER KEY: Run All 21 Protocols Simultaneously (python3 master_execution_suite.py)
  23. 🎯 AGGRESSIVE 50%+ Female Demographic Shift Engine (python3 aggressive_demographic_shift.py)
+ 24. 🎨 AI Visual Asset Synthesis Engine (python3 visual_synthesis_engine.py)
+ 25. 🌐 Cross-Platform Syndication Mesh (python3 multi_platform_syndicator.py)
+ 26. 🧠 Predictive Self-Learning Telemetry Loop (python3 self_learning_optimizer.py)
+ 27. 🤖 Remote Command Bot Interface (python3 telegram_command_bot.py)
  10. Exit Hub"
     echo "=================================================="
-    read -p "Select an option [1-23]: " choice
+    read -p "Select an option [1-27]: " choice
 
     case $choice in
         1)
@@ -100,6 +104,18 @@ while true; do
         ;;
     23)
         python3 aggressive_demographic_shift.py
+        ;;
+    24)
+        python3 visual_synthesis_engine.py
+        ;;
+    25)
+        python3 multi_platform_syndicator.py
+        ;;
+    26)
+        python3 self_learning_optimizer.py
+        ;;
+    27)
+        python3 telegram_command_bot.py
         ;;
     10)
             echo "Exiting Sovereign Hub V6. Total global execution achieved. ⚡"

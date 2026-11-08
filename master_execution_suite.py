@@ -27,6 +27,10 @@ def execute_all_protocols():
     protocols = [
         ("global_women_reach_optimizer.py", "US & Global Women Reach Optimizer"),
         ("aggressive_demographic_shift.py", "Aggressive 50%+ Female Demographic Shift Engine"),
+        ("telegram_command_bot.py", "Remote Command Bot Interface"),
+        ("self_learning_optimizer.py", "Predictive Self-Learning Telemetry Loop"),
+        ("multi_platform_syndicator.py", "Cross-Platform Syndication Mesh"),
+        ("visual_synthesis_engine.py", "AI Visual Asset Synthesis"),
         ("auto_reel_batcher.py", "Automated Reel Batcher"),
         ("ai_hook_optimizer.py", "AI Hook & Caption Optimizer"),
         ("audio_trend_sync.py", "Audio Trend Sync"),

@@ -1,19 +1,6 @@
 {
-  "targets": [
-    "DfcCv35REi-",
-    "Dd7PL1exx-J",
-    "Ddt4qqsqlHT",
-    "DdrUBmEKJkR",
-    "DdrKInTqpAf",
-    "DfSE91eKy_S",
-    "DfZRKbMxWsn",
-    "DfccmkhqTqf",
-    "DfccmkhqTqf",
-    "Df_NEW_1794066341",
-    "REEL_TARGET_11",
-    "REEL_TARGET_12"
-  ],
-  "latest_active": "Df_NEW_1794066341",
-  "total_count": 12,
-  "matrix_version": "v2.0-scaled"
+  "status": "Self-learning calibration complete",
+  "winning_hook_pattern": "Designing a calm, zero-friction digital workspace.",
+  "recommended_adjustment": "Increase warm dark mode contrast by 5% and focus hooks on mental clarity.",
+  "target_lock": "60% Women / 40% Men Active"
 }
