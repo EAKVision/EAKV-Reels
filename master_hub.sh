@@ -75,3 +75,6 @@ while true; do
             ;;
     esac
 done
+
+# --- Demographic & Audience Expansion ---
+# 26) 🌸 Women Reach & Aesthetic Optimization (python3 women_reach_optimizer.py)
