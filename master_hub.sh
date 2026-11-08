@@ -14,7 +14,8 @@ while true; do
     echo " 7. Generate Interview Technical Talking-Point Brief"
     echo " 8. Sync GitHub README Telemetry"
     echo " 9. Track & Rotate Active Reel Matrix Performance"
-    echo " 10. Exit Hub"
+    echo " 11. Run Women Reach & Aesthetic Optimization (python3 women_reach_optimizer.py)
+ 10. Exit Hub"
     echo "=================================================="
     read -p "Select an option [1-10]: " choice
 
