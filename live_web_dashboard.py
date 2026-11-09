@@ -1,62 +1,60 @@
 #!/usr/bin/env python3
-"""
-live_web_dashboard.py - Generates a real-time web telemetry dashboard 
-styled in warm dark-mode minimalism for live browser monitoring.
-"""
-
-import os
+import http.server
+import socketserver
 import json
+import os
 
-def generate_dashboard():
-    print("[*] Generating live telemetry web dashboard...")
-    
-    html_content = """<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>EAKV Sovereign Command Dashboard</title>
-    <style>
-        body { background-color: #121212; color: #E0E0E0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 40px; }
-        .container { max-width: 900px; margin: 0 auto; }
-        h1 { color: #D4AF37; font-weight: 300; letter-spacing: 2px; border-bottom: 1px solid #2D2D2D; padding-bottom: 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: #1E1E1E; border: 1px solid #2D2D2D; border-radius: 8px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-        .card h3 { margin-top: 0; color: #A0A0A0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-        .metric { font-size: 2.2rem; font-weight: 600; color: #FFFFFF; margin-top: 10px; }
-        .status-active { color: #4CAF50; font-weight: 500; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>⚡ EAKV SOVEREIGN COMMAND CENTER</h1>
-        <div class="grid">
-            <div class="card">
-                <h3>Total Verified Views</h3>
-                <div class="metric">42,800+</div>
-            </div>
-            <div class="card">
-                <h3>US Female (18-35) Share</h3>
-                <div class="metric">38.4% <span style="font-size: 1rem; color: #D4AF37;">(Target: 60%)</span></div>
-            </div>
-            <div class="card">
-                <h3>Active Protocols</h3>
-                <div class="metric">27 / 27</div>
-            </div>
-            <div class="card">
-                <h3>System Status</h3>
-                <div class="metric" style="font-size: 1.4rem; margin-top: 15px;"><span class="status-active">● 24/7 Autonomous Lock</span></div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-"""
-    
-    os.makedirs("dashboard", exist_ok=True)
-    with open("dashboard/index.html", "w") as f:
-        f.write(html_content)
+PORT = 8080
+
+class DashboardHandler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
         
-    print("[+] Live web dashboard successfully compiled at dashboard/index.html")
+        # Load active targets for live telemetry
+        try:
+            with open("active_target.json", "r") as f:
+                data = json.load(f)
+                targets = data.get("targets", [])
+        except:
+            targets = []
+
+        html = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>EAKV Sovereign Live Telemetry Dashboard</title>
+            <style>
+                body {{ background-color: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px; }}
+                h1 {{ color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }}
+                .card {{ background-color: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 20px; margin-bottom: 20px; }}
+                .status {{ color: #2ea043; font-weight: bold; }}
+            </style>
+        </head>
+        <body>
+            <h1>🚀 EAKV SOVEREIGN LIVE WEB TELEMETRY DASHBOARD</h1>
+            <div class="card">
+                <h3>System Status: <span class="status">ONLINE & MAXIMUM REACH LOCKED</span></h3>
+                <p><b>Target Demographic:</b> Women 18-35 / US & Global Tech Ecosystem</p>
+                <p><b>Active Syndication Nodes:</b> Instagram (<code>DffK5tmKnyT</code>) & LinkedIn (<code>evufNhDG</code>)</p>
+            </div>
+            <div class="card">
+                <h3>Active Target Matrix</h3>
+                <pre>{json.dumps(targets, indent=2)}</pre>
+            </div>
+        </body>
+        </html>
+        """
+        self.wfile.write(html.encode("utf-8"))
+
+def run_server():
+    with socketserver.TCPServer(("", PORT), DashboardHandler) as httpd:
+        print(f"====================================================")
+        print(f"📊 EAKV LIVE WEB TELEMETRY DASHBOARD RUNNING")
+        print(f"[*] Access via browser at: http://localhost:{PORT}")
+        print(f"====================================================")
+        httpd.serve_forever()
 
 if __name__ == "__main__":
-    generate_dashboard()
+    run_server()

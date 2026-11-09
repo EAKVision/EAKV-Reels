@@ -1,16 +1,21 @@
 {
-  "targets": [
-    {
-      "target_id": "Global_Tech_Recruiters_LinkedIn",
-      "url": "https://lnkd.in/p/evufNhDG",
-      "status": "active",
-      "objective": "Dream Job Acquisition & Direct Outreach"
-    },
-    {
-      "target_id": "Worldwide_Instagram_Reel_Matrix",
-      "url": "https://www.instagram.com/reel/DffK5tmKnyT/?rpxt=eTQ1bG5tcXhveno0",
-      "status": "active",
-      "objective": "Global Brand Authority & 50%+ Female Demo (18-35)"
-    }
-  ]
+  "target_regions": [
+    "United States (Primary - NYC, SF, LA tech & design hubs)",
+    "Global / Worldwide (Secondary - London, Tokyo, Berlin)"
+  ],
+  "target_demographic": "Women 18-35 (Tech, Architecture, Minimalist Design, Productivity, Engineering)",
+  "demographic_split_goal": "50%+ Female / <50% Male",
+  "aesthetic_calibration": "Warm dark mode, clean typography, calm execution, workspace architecture",
+  "active_seo_tags": [
+    "#aesthetictech",
+    "#minimalistdesk",
+    "#deepwork",
+    "#workspacegoals",
+    "#softwareengineer",
+    "#productivitysystem",
+    "#techlifestyle",
+    "#girlsintech",
+    "#deskinspiration"
+  ],
+  "status": "50%+ Female Demographic Lock Active"
 }

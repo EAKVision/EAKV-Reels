@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-08 13:09:38",
-  "target_audience": "Women & Men 18-35 (US & Global Tech/Productivity)",
+  "timestamp": "2026-11-09 16:16:48",
+  "target_audience": "Women 18-35 (US & Global Tech, Design, Systems Engineering)",
   "active_hooks": [
-    "Building a 24/7 automated system so I can focus purely on deep work and training.",
-    "How I manage C/Unix systems programming with zero friction.",
-    "The minimalist workflow behind elite consistency."
+    "How I built a calm, zero-friction Unix workflow that protects my deep work time.",
+    "Designing a minimalist digital workspace for maximum focus and peace.",
+    "The exact daily system I use to balance heavy systems programming with elite training."
   ],
-  "ctr_boost_multiplier": "1.8x",
-  "status": "Hooks optimized for high retention"
+  "retention_focus": "Aesthetic clarity, workflow elegance, zero chaos",
+  "status": "Hooks calibrated for high female CTR & share-rate"
 }
