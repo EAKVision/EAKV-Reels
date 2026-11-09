@@ -1,6 +1,39 @@
 {
-  "status": "Self-learning calibration complete",
-  "winning_hook_pattern": "Designing a calm, zero-friction digital workspace.",
-  "recommended_adjustment": "Increase warm dark mode contrast by 5% and focus hooks on mental clarity.",
-  "target_lock": "60% Women / 40% Men Active"
+  "targets": [
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/p/Dfh1co_Ci-S/",
+      "post_id": "Dfh1co_Ci-S",
+      "target_demographic": "Women 18-35 / US & Worldwide",
+      "status": "Active"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://lnkd.in/p/eHybPpCv",
+      "post_id": "eHybPpCv",
+      "target_demographic": "US & Global Tech Leads, Engineering Directors, Women in Tech (18-35)",
+      "status": "Active"
+    },
+    {
+      "platform": "X (Twitter)",
+      "url": "https://x.com/EAKV_Sovereign/status/active",
+      "post_id": "eakv_x_01",
+      "target_demographic": "Global Tech Minimalists & Engineers (18-35)",
+      "status": "Queued"
+    },
+    {
+      "platform": "YouTube Shorts",
+      "url": "https://youtube.com/@EAKV_Sovereign",
+      "post_id": "eakv_yt_01",
+      "target_demographic": "Worldwide Tech & Lifestyle Audience",
+      "status": "Queued"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://tiktok.com/@eakv_sovereign",
+      "post_id": "eakv_tk_01",
+      "target_demographic": "Global Minimalist Tech & Career Growth",
+      "status": "Queued"
+    }
+  ]
 }
