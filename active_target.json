@@ -1,21 +1,6 @@
 {
-  "target_regions": [
-    "United States (Primary - NYC, SF, LA tech & design hubs)",
-    "Global / Worldwide (Secondary - London, Tokyo, Berlin)"
-  ],
-  "target_demographic": "Women 18-35 (Tech, Architecture, Minimalist Design, Productivity, Engineering)",
-  "demographic_split_goal": "50%+ Female / <50% Male",
-  "aesthetic_calibration": "Warm dark mode, clean typography, calm execution, workspace architecture",
-  "active_seo_tags": [
-    "#aesthetictech",
-    "#minimalistdesk",
-    "#deepwork",
-    "#workspacegoals",
-    "#softwareengineer",
-    "#productivitysystem",
-    "#techlifestyle",
-    "#girlsintech",
-    "#deskinspiration"
-  ],
-  "status": "50%+ Female Demographic Lock Active"
+  "status": "Self-learning calibration complete",
+  "winning_hook_pattern": "Designing a calm, zero-friction digital workspace.",
+  "recommended_adjustment": "Increase warm dark mode contrast by 5% and focus hooks on mental clarity.",
+  "target_lock": "60% Women / 40% Men Active"
 }
