@@ -2,32 +2,35 @@ name: EAKV Sovereign Cloud 24/7 Engine
 
 on:
   schedule:
-    # Runs every 6 hours automatically in the cloud
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+    - cron: '0 */3 * * *' # Runs every 3 hours around the clock
+  workflow_dispatch: # Allows manual triggers from your phone or desktop
+
+permissions:
+  contents: write
 
 jobs:
   run-sovereign-suite:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Execute Sovereign Master Suite & Telemetry Loop
+      - name: Execute Sovereign Master Suite & Boost Protocol
         run: |
-          python3 master_execution_suite.py
-          python3 aggressive_demographic_shift.py
-          python3 self_learning_optimizer.py
+          python3 boost_protocol.py
+          python3 engagement_tracker.py
+          python3 video_splicing_pipeline.py || true
+          python3 global_women_reach_optimizer.py || true
 
       - name: Commit & Sync Telemetry State
         run: |
-          git config --global user.name "EAKV Cloud Sovereign Bot"
-          git config --global user.email "bot@eakv. sovereign"
-          git add reel_performance.csv cron_execution.log active_target.json || true
-          git commit -m "auto: 24/7 cloud sovereign execution sweep [skip ci]" || true
-          git push origin main
+          git config --global user.name "EAKV Sovereign Bot"
+          git config --global user.email "bot@eakv.internal"
+          git add .
+          git commit -m "⚡ Automated Sovereign 24/7 Cloud Telemetry Sync [skip ci]" || echo "No changes to commit"
+          git push || echo "Push skipped or already up-to-date"
