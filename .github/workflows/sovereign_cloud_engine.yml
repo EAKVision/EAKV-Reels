@@ -1,12 +1,10 @@
-name: EAKV Sovereign Cloud 24/7 Engine
+name: Sovereign Cloud Engine & SEO Telemetry
 
 on:
+  push:
+    branches: [ main ]
   schedule:
-    - cron: '0 */3 * * *' # Runs every 3 hours around the clock
-  workflow_dispatch: # Allows manual triggers from your phone or desktop
-
-permissions:
-  contents: write
+    - cron: '0 */6 * * *' # Runs every 6 hours automatically
 
 jobs:
   run-sovereign-suite:
@@ -20,17 +18,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Execute Sovereign Master Suite & Boost Protocol
+      - name: Execute Autonomous Index Pusher
         run: |
-          python3 boost_protocol.py
-          python3 engagement_tracker.py
-          python3 video_splicing_pipeline.py || true
-          python3 global_women_reach_optimizer.py || true
+          python3 index_pusher.py
 
-      - name: Commit & Sync Telemetry State
+      - name: Execute Deep Entity Override Telemetry
         run: |
-          git config --global user.name "EAKV Sovereign Bot"
-          git config --global user.email "bot@eakv.internal"
-          git add .
-          git commit -m "⚡ Automated Sovereign 24/7 Cloud Telemetry Sync [skip ci]" || echo "No changes to commit"
-          git push || echo "Push skipped or already up-to-date"
+          python3 deep_entity_override.py
