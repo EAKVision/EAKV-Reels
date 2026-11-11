@@ -11,3 +11,4 @@
 eakv_vault_backup_*
 generated_batches/
 dashboard/
+venv/
