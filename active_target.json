@@ -1,6 +1,114 @@
 {
-  "status": "Self-learning calibration complete",
-  "winning_hook_pattern": "Designing a calm, zero-friction digital workspace.",
-  "recommended_adjustment": "Increase warm dark mode contrast by 5% and focus hooks on mental clarity.",
-  "target_lock": "60% Women / 40% Men Active"
+  "targets": [
+    {
+      "target_id": "DfcCv35REi-",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/DfcCv35REi-/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "Dd7PL1exx-J",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/Dd7PL1exx-J/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "Ddt4qqsqlHT",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/Ddt4qqsqlHT/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "DdrUBmEKJkR",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/DdrUBmEKJkR/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "DdrKInTqpAf",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/DdrKInTqpAf/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "DfSE91eKy_S",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/DfSE91eKy_S/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "DfZRKbMxWsn",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/DfZRKbMxWsn/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "DfccmkhqTqf",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/DfccmkhqTqf/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "Df2_mtKK8tj",
+      "platform": "instagram",
+      "url": "https://www.instagram.com/reel/Df2_mtKK8tj/",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    },
+    {
+      "target_id": "e5GC3zgg",
+      "platform": "linkedin",
+      "url": "https://lnkd.in/p/e5GC3zgg",
+      "demographic_target": "Women 18-35 (US & Global Tech/Minimalism)",
+      "peak_window_eet": "16:00-20:00",
+      "target_demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "demographic": "Women 18-35 (US & Global Tech/Minimalism)",
+      "node_state": "ACTIVE_SATURATION",
+      "state": "ACTIVE_SATURATION"
+    }
+  ]
 }
